@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-heading: 'Staatliches', sans-serif;
+  --ff-texting: 'Palanquin', sans-serif;
+
+  --bg-header: #8E9AAF;
+  --bg-body: #EFF1FF;
+
+  font-size: 62.5%;
+  --fs-heading: 4rem;
+  --fs-texting: 2rem;
+}
+
+body {
+  background: var(--bg-body);
+  font-family: var(--ff-heading);
+}
+
+.page {
+  max-width: 38rem;
+  margin: 0 auto;
+}
+
+header {
+  background: var(--bg-header);
+  height: 27.9rem;
+  width: 38rem;
+  margin-bottom: 1.4rem;
+}
+
+img {
+  width: 100%;
+}
+
+header img {
+  display: block;
+  margin: auto;
+  padding-top: 3.2rem;
+  height: 17rem;
+}
+
+body header p {
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+
+  font-weight: 400;
+  font-size: var(--fs-heading);
+  letter-spacing: 0.05em;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  
+  background: #CBC0D3;
+  margin-top: 3.2rem;
+  height: 4.9rem;
+}
+
+main {
+  width: 32rem;
+  margin: auto;
+  display: grid;
+  gap: 3.6rem;
+}
+
+main p {
+  width: 30.5rem;
+  margin-bottom: 3.1rem;
+  text-align: center;
+
+  font-family: 'Palanquin', sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+  letter-spacing: 0%;
+  color: #23053A;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card {
+  position: relative;
+}
+.card img {
+  border-radius: 20px;
+}
+
+.card p {
+  text-transform: uppercase;
+  color: #4A4E69;
+  font-weight: 400;
+  font-size: var(--fs-texting);
+  font-family: var(--ff-heading);
+
+  line-height: 3.5rem;
+  letter-spacing: 0.05em;
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+
+  border-radius: 2rem;
+  background-color: #FEEAFA;
+  width: 11.2rem;
+  height: 3.5rem;
+}
+
+.card:nth-child(5) {
+  margin-bottom: 6rem;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  opacity: 0;
+}
+
+.card {
+  transition: transform 0.3s;
+}
+
+.card {
+  animation: appear 1s;
+}
+
+/*
+.product {
+  animation: appear2 1s;
+}
+*/
+
+.card:nth-child(3) {
+  animation-delay: .3s;
+}
+
+.card:nth-child(4) {
+  animation-delay: .6s;
+}
+
+.card:nth-child(5) {
+  animation-delay: .9s;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
